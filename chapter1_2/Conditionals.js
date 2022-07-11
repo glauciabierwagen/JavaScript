@@ -80,6 +80,7 @@ if (num === 1) {
 
 /* Example 03 - if-else-if-else... */
 
+
 var month = 5;
 if (month === 1) {
     console.log('January');
