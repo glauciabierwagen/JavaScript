@@ -109,3 +109,61 @@ var myObj = {name: 'John', age: 21};
 delete myObj.age;
 console.log(myObj); //Object {name: "John"}
 
+
+
+//* ****** EcmaScript 2015 (ES6): let and const keywords
+
+//* ****** EcmaScript 2015 (ES6): let is the new var (https://goo.gl/he0udZ)
+var framework = 'Angular';
+var framework = 'React';
+console.log(framework);
+
+//let language = 'JavaScript'; //{1}
+
+//let language = 'Rubi'; //{2}
+//console.log(language);
+
+const PI = 3.141593;
+//PI = 3.0; // error
+console.log(PI);
+
+const jsFramework = {
+  name: 'Angular'
+};
+
+//jsFramework = 'React';
+
+//jsFramework = {
+ // name: 'Vue'
+ // };
+
+let movie = 'Lord of the Rings'; //{1}
+//var movie = 'Batman v Superman'; // erro, movie já foi declarada
+function starWarsFan() {
+  const movie = 'Star wars'; //{2}
+  return movie;
+}
+
+function marvelFan() {
+  const movie = 'Avengers'; //{3}
+  return movie;
+}
+
+function blizzardFan() {
+  const isFan = true; 
+  let phrase = 'Warcraft'; //{4}
+  console.log('Before if:' + phrase);
+  if (isFan) {
+    let phrase = 'initial text'; // {5}
+    phrase = 'For the Horde!'; // {6}
+    console.log('Inside if' + phrase);    
+  } 
+  phrase = 'For the Alliance'; // {7}
+  console.log('Aftere if' + phrase); 
+  }
+
+ console.log(movie); // {8}
+ console.log(starWarsFan()); // {9}
+ console.log(marvelFan()); // {10}
+ console.log(movie); // {11}
+ blizzardFan(); // {12}
