@@ -91,3 +91,87 @@ const hello_test = {
     }
     };
     console.log(hello_test);
+
+//INHERITANCE
+class Book { // {2}
+  constructor(title, pages, isbn) {
+  this.title = title;
+  this.pages = pages;
+  this.isbn = isbn;
+  }
+  
+  printIsbn() {
+  console.log(this.isbn);
+  }
+  }
+
+class ITBook extends Book {
+  constructor(title, pages, isbn, technology) {
+  super(title, pages, isbn);
+  this.technology = technology;
+}
+
+printTechnology() {
+  console.log(this.technology);
+}
+}
+
+let jsBook = new ITBook('Learning JS Algorithms', '200', '1234567890',
+'JavaScript');
+console.log(jsBook.title);
+console.log(jsBook.printTechnology());
+
+//GETTERS and SETTERS
+
+class Person {
+  constructor(name) {
+    this._name = name; // {1}
+  }
+
+  get name() { // {2}
+    return this._name;
+  }
+
+  set name(value) { // {3}
+    this._name = value;
+  }
+}
+
+let lotChar = new Person('Frodo');
+console.log(lotChar.name);
+lotChar.name = 'Gandalf';
+console.log(lotChar.name);
+lotChar._name = 'Sam';
+console.log(lotChar.name);
+
+//EXPONENTIAL OPERATOR
+
+const r = 2; 
+const area1 = 3.14 * r * r;
+const area2 = 3.14 * (r ** 2);
+console.log(area1, area2);
+const area3 = 3.14 * Math.pow(r, 2);
+
+//MODULES
+
+//const circleArea1 = r => 3.14 * (r ** 2);
+//const squareArea = s => s * s; 
+//export {circleArea1, squareArea};
+
+//import * as area from './Calcarea';
+//import { circleArea1, squareArea } from "./Calcarea";
+//console.log(circle(2));
+//console.log(squareArea(2));
+
+//console.log(area.circle(2));
+//console.log(area.square(2));
+
+//import { circleArea1, squareArea } from './CalcArea'; // {2}
+//import { circleArea1 as circle } from './CalcArea';
+
+//console.log(circleArea(2));
+//console.log(squareArea(2));
+
+import Book2 from './Calcarea';
+const myBook = new Book2('some title');
+myBook.printTitle();
