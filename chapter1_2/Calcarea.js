@@ -7,11 +7,4 @@ export const squareArea = s => s * s;
 // export { circleArea, squareArea }; // {1}
 export { circleArea1 as circle, squareArea as square };
 
-export default class Book2 {
-    constructor(title) {
-    this.title = title;
-    }
-    printTitle() {
-    console.log(this.title);
-    }
-    }
+
