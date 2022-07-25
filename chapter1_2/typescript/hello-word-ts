@@ -42,3 +42,9 @@ function compareTwoObjects(a: MyObject, b: MyObject) {
   console.log(a.compareTo(b));
   console.log(b.compareTo(a));
 }
+
+// 
+//https://www.typescriptlang.org/docs/home.html.
+//O TypeScript também tem um playground online (semelhante ao Babel)
+//em https://www.typescriptlang.org/play/index.html, o qual pode
+//ser usado para executar alguns exemplos de código.
