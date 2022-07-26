@@ -68,7 +68,7 @@ for (let i= 1; i < fibonacci.length; i++) {
 
  //Inserting element in the first position in a array
  
-
+//First methodo. It doesn't work
  Array.prototype.insertFirstPosition = function(value) {
     for (let i = this.length; i >= 0; i--) {
     this[i] = this[i - 1];
@@ -84,6 +84,8 @@ this[i] = this[i - 1];
 this[0] = value;
 };
 numbers.insertFirstPosition(-1);
+
+//Second method. Using unshift(deslocar)
 
 numbers.unshift(-2);
 numbers.unshift(-4, -3);
