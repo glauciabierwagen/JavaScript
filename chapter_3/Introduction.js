@@ -92,3 +92,53 @@ numbers.unshift(-4, -3);
 console.log(numbers);
 console.log(numbers.length);
 
+numbers.pop();
+console.log('Removed last value with pop', numbers);
+
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i] = numbers[i + 1];
+}
+
+Array.prototype.reIndex = function(myArray) {
+    const newArray = [];
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] !== undefined) {
+            console.log(myArray[i]);
+            newArray.push(myArray[i]);
+        }
+    }
+    return newArray;
+};
+
+
+// remove first position manually and reIndex
+Array.prototype.removeFirstPosition = function() {
+    for (let i = 0; i < this.length; i++) {
+      this[i] = this[i + 1];
+    }
+    return this.reIndex(this);
+  };
+
+  numbers = numbers.removeFirstPosition();
+  console.log('Removed first with removeFirstPosition + reIndex', numbers);
+
+  //Shift method for removing elements
+
+  numbers.shift();
+  console.log('Removed first with shift', numbers);
+  console.log('Lenght after removed first with shift', numbers.length);
+
+  //Using method splice to remove an element of an array specifying the position/index
+  // splice method - parameter (index, howManyPositionsToBeRemoved, item1...itemX)
+
+  numbers.splice(5, 3);
+  console.log('Removing 3 elements (3, 4, 5) starting index 5', numbers);
+
+  
+  numbers.splice(5, 0, 3, 4, 5);
+  console.log('Adding 3 elements (3, 4, 5) starting index 5', numbers);
+
+  numbers.splice(5, 3, 10, 18, 19);
+  console.log('Removing 3 starting index 5 and adding elements (10, 18, 19)', numbers);
+
+
