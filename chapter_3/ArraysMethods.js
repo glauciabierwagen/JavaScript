@@ -87,4 +87,51 @@ for (const n of iterator) {
 }
 
 // Oututput 1 of iterator 1 until number 15 of iterator 15
+
+//* ********* Array entries, keys and values
+let aEntries = numbers2.entries(); //obtém um iterador de chave/valor
+console.log(aEntries.next().value); // [0, 1] - posição 0, valor 1
+console.log('aEntries.next().value', aEntries.next().value); // [1, 2] - position 1, value 2
+console.log('aEntries.next().value', aEntries.next().value); // [2, 3] - position 2, value 3
+
+// or use code below
+
+aEntries = numbers2.entries();
+for (const n of aEntries) {
+  console.log(n);
+}
+
+//Arrays Keys
+
+const aKeys = numbers2.keys(); //obtém um iterador de chaves
+console.log(aKeys.next()); // {value: 0, done: false } done false means iterator has more values
+console.log(aKeys.next());  // {value: 1, done: false }
+console.log(aKeys.next());  // {value: 2, done: false }
+
+console.log('Array.values - Only Edge and Safari - Oct 2017');
+const aValues = numbers2.values();
+console.log(aValues.next()); // {value: 1, done: false } done false means iterator has more values
+console.log(aValues.next()); // {value: 2, done: false }
+console.log(aValues.next()); // {value: 3, done: false }
+
+//* ********* Using the from method
+console.log('Using the from methodo');
+const evens = Array.from(numbers2, x => x % 2 === 0);
+console.log('Array.from(numbers, x => x % 2 === 0', evens);
+
+const numbers3 = Array.from(numbers2);
+console.log('Array.from(numbers)', numbers3);
+
+//* ********* Using Array.of
+
+const number4 = Array.of(1); //similar to let numbers4 = [1];
+console.log('Array.of(1)', number4);
+const number5 = Array.of(1, 2, 3, 4, 5, 6); //similar to let number5 = [1, 2, 3, 4, 5, 6];
+console.log('Array.of(1, 2, 3, 4, 5, 6)', number5);
+const numbersCopy = Array.of(...number5); //Copy of an an existent array. In this case number5
+console.log('Array.of(...number5)', numbersCopy);
+
+
+
+
 //https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition/blob/master/LearningJavaScriptDataStructuresandAlgorithmsThirdEdition_Code/examples/chapter03/06-ES2015Methods.js
