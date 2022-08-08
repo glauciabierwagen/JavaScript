@@ -132,6 +132,95 @@ const numbersCopy = Array.of(...number5); //Copy of an an existent array. In thi
 console.log('Array.of(...number5)', numbersCopy);
 
 
+//* ********* Using the fill method
+console.log('Using the fill method')
+
+numbersCopy.fill(0); //All numbers of the array are filled with 0
+console.log('numbersCopy.fill(0)', numbersCopy); //Output ([0,0,0,0,0,0])
+
+numbersCopy.fill(2, 1); //All positions will have the value 2 from position 1
+console.log('numbersCopy.fill(2, 1)', numbersCopy); //Output ([0,2,2,2,2,2])
+
+numbersCopy.fill(1, 3, 5); //preencheremos o array com o valor 1, do índice 3 ao índice 5 (não inclusivo)
+console.log('numbersCopy.fill(1, 3, 5)', numbersCopy); //Output [0,2,2,1,1,2]
+
+// O código a seguir  criará um array de tamanho 6 e todos os seus valores serão iguais a 1
+let ones = Array(6).fill(1);
+console.log(ones);
+
+//* ********* Using the copyWithin method
+//O método copyWithin copia uma sequência de valores do array para a posição de um índice de início.
+
+let copyArray = [1, 2, 3, 4, 5, 6];
+console.log('copyArray', copyArray);
+
+copyArray.copyWithin(0, 3);//copiar os valores 4, 5 e 6 para as primeiras três posições do array
+console.log('copyArray.copyWithin(0,3)', copyArray); // Output [4,5,6,4,5,6]
+
+copyArray = [1, 2, 3, 4, 5, 6];
+copyArray.copyWithin(1, 3, 5); // Copiar os valores 4 e 5 (as posições 3 e 4) para as posições 1 e 2
+console.log('copyArray.copyWithin(1, 3, 5)', copyArray);
+
+//Ordening elements
+
+let numbersord = [1, 2, 3, 4, 5, 6];
+numbersord.reverse();
+console.log(numbersord);
+numbers.sort(); //ordem lexicográfica todos os elementos são strings
+console.log(numbersord);
+numbers.sort((a, b) => a - b);
+console.log(numbersord);
+
+function compare(a, b) {
+  if (a < b) {
+  return -1;
+  
+  }
+  if (a > b) {
+  return 1;
+  }
+  // a deve ser igual a b
+  return 0;
+  }
+  numbers.sort(compare);
+  console.log(numbersord);
+
+  //Personalized ordenation
+
+  const friends = [
+    { name: 'John', age: 30 },
+    { name: 'Ana', age: 20 },
+    { name: 'Chris', age: 25 }, // vírgula no final: ES2017
+    ];
+    function comparePerson(a, b) {
+    if (a.age < b.age) {
+    return -1;
+    }
+    if (a.age > b.age) {
+    return 1;
+    }
+    return 0;
+    }
+    console.log(friends.sort(comparePerson));
+
+// O JavaScript considera as letras diferentes, código para ignorar a diferenca maiúscula e minúscula
+let names = ['Ana', 'ana', 'john', 'John']; // inicia o array com o estado original
+console.log(names.sort((a, b) => {
+if (a.toLowerCase() < b.toLowerCase()) {
+return -1;
+}
+if (a.toLowerCase() > b.toLowerCase()) {
+return 1;
+}
+return 0;
+}));
+//minúscula no início
+names.sort((a,b) => a.localeCompare(b));
+console.log(names);
+
+const names2 = ['Maéve', 'Maeve'];
+console.log(names2.sort((a, b) => a.localeCompare(b))); //Output Maeve, Maéve
+
 
 
 //https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition/blob/master/LearningJavaScriptDataStructuresandAlgorithmsThirdEdition_Code/examples/chapter03/06-ES2015Methods.js
