@@ -221,6 +221,60 @@ console.log(names);
 const names2 = ['Maéve', 'Maeve'];
 console.log(names2.sort((a, b) => a.localeCompare(b))); //Output Maeve, Maéve
 
+//Searching
+
+const numbersSer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 26];
+console.log('numbers', numbersSer);
+
+//* ** toString
+console.log('numbers.toString()', numbersSer.toString()); //Convert numbers to String
+const numbersString = numbersSer.join('-');
+console.log('numbers.join("-")', numbersString);
+
+
+
+//IndexOf o método indexOf, que devolve o índice do primeiro elemento correspondente ao argumento passado, e
+//lastIndexOf, que devolve o índice do último elemento encontrado,
+//correspondente ao argumento passado.
+
+console.log(numbersSer.indexOf(10));
+console.log(numbersSer.indexOf(100));
+
+numbers.push(10);
+console.log(numbers.lastIndexOf(10));
+console.log(numbers.lastIndexOf(100));
+
+//* ********* methods find and findIndex
+// A diferença entre find e findIndex é que o método find devolve o primeiro valor do array que satisfaça a condição proposta. O método
+//findIndex, por outro lado, devolve o índice do primeiro valor do array que
+//satisfaça a condição.
+
+console.log('Methods find and findIndex');
+
+ function multipleOf13(element){
+  return element % 13 === 0
+ };
+
+ console.log('numbers.find(multipleOf13', numbersSer.find(multipleOf13)); //Number 13
+ console.log('numbers.findIndex(multipleOf13', numbersSer.findIndex(multipleOf13)); // Position 12
+
+ //* ********* EcmaScript 2016 (ES7): using the method includes
+ //O método includes devolve true caso um elemento seja encontrado no
+//array, e false caso contrário.
+
+console.log('EcmaScript 2016 (ES7): using the method includes');
+
+console.log('numbersSEr.includes(15)', numbersSer.includes(15)); //True
+console.log('numbersSEr.includes(20)', numbersSer.includes(20)); // False
+
+let numbersIn = [7,6,5,4,3,2,1];
+console.log(numbersIn.includes(4,5)); // O númbero quatro é o valor, e o 5 a posicão no índice
+
 
 
 //https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition/blob/master/LearningJavaScriptDataStructuresandAlgorithmsThirdEdition_Code/examples/chapter03/06-ES2015Methods.js
+
+//Extra materials: 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array (http://goo.gl/vu1diT).
+
+//A biblioteca Lo-Dash é igualmente muito útil quando trabalhamos com arrays em projetos JavaScript: http://lodash.com.
