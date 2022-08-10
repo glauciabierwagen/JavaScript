@@ -271,9 +271,9 @@ let numbersIn = [7,6,5,4,3,2,1];
 console.log(numbersIn.includes(4,5)); // O númbero quatro é o valor, e o 5 a posicão no índice
 
 
-
 //https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition/blob/master/LearningJavaScriptDataStructuresandAlgorithmsThirdEdition_Code/examples/chapter03/06-ES2015Methods.js
 
+//
 //Extra materials: 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array (http://goo.gl/vu1diT).
 
