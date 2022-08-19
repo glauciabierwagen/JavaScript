@@ -24,10 +24,19 @@ console.log('stack.peek() =>', stack.peek()); // Output 8 elemento no topo da pi
 
 stack.push(11); 
 console.log('stack.size() after push 11 =>', stack.size()); // Outputs 3 elements
-console.log('stack after push 5 and 8 =>', stack.toString());
+console.log('stack elements after push 11 =>', stack.toString());
 console.log('stack.isEmpty() =>', stack.isEmpty()); // Ao chamar o método isEmpty deverá true se a pilha estiver vazia e false se tiver elementos
 
 stack.push(15);
+console.log('stack after push 15 =>', stack.toString());
+stack.pop();
+console.log('stack.size after pop 15', stack.size());
+console.log('stack elements after pop 15 =>', stack.toString());
+stack.pop();
+console.log('stack.size after push 11 ', stack.size());
+console.log('stack elements after pop 11 =>', stack.toString());
+
+
 
 
 
