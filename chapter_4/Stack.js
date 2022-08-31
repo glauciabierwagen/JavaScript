@@ -37,6 +37,33 @@ console.log('stack.size after push 11 ', stack.size());
 console.log('stack elements after pop 11 =>', stack.toString());
 
 
+// Protecting the internal elements of the data structures
+
+const stack3 = new Stack();
+console.log(Object.getOwnPropertyNames(stack3));
+console.log(Object.keys(stack3));
+console.log(stack3.items);
+
+// Symbols
+ const_items = Symbol('stackItems');
+ class Stack4 {
+    constructor () {
+        this[_items] = [];
+    }
+ }
+  
+ const stack5 = new Stack();
+ stack5.push(5);
+ stack5.push(8);
+ let objectSymbols = Object.getOwnPropertySymbols(stack5);
+ console.log(objectSymbols.length); // output 1
+ console.log(objectSymbols); // output [Symbol()]
+ console.log(objectSymbols[0]); // Undefined
+ //stack[objectSymbols[0]].push(1); Não funcionou
+//stack5.print();
+
+
+
 
 
 
