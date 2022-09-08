@@ -11,3 +11,5 @@ class Queue {
 }
 
 console.log(Queue);
+
+//https://github.com/loiane/javascript-datastructures-algorithms/blob/main/examples/chapter05/01-Queue.js
