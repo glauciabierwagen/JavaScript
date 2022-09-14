@@ -44,3 +44,5 @@ deque.removeBack(); // Camila decide sair
 console.log(deque.toString()); // Jack
 deque.addFront('John'); // John retorna para pedir uma informação
 console.log(deque.toString()); // John,Jack
+
+//https://github.com/loiane/javascript-datastructures-algorithms/blob/main/examples/chapter05/02-Deque.js
