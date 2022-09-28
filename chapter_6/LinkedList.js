@@ -60,4 +60,5 @@
 //    return undefined; // {10}
 //    }
 
+//https://github.com/loiane/javascript-datastructures-algorithms/blob/main/examples/chapter06/01-LinkedList.js
 
