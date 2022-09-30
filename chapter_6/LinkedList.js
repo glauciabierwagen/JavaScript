@@ -62,3 +62,79 @@
 
 //https://github.com/loiane/javascript-datastructures-algorithms/blob/main/examples/chapter06/01-LinkedList.js
 
+//Percorrendo a lista com um laco até alcancar a posicão desejada - Algoritmo
+
+//getElementAt(index) {
+//   if (index >= 0 && index <= this.count) { // {1}
+//    let node = this.head; // {2}
+//    for (let i = 0; i < index && node != null; i++) { // {3}
+//    node = node.next;
+//    }
+//    return node; // {4}
+//    }
+//    return undefined; // {5}
+//    }
+
+//Inserindo um elemento em qualquer posicão (insert)
+//Algoritmo
+
+//insert(element, index) {
+//    if (index >= 0 && index <= this.count) { // {1}
+//    const node = new Node(element);
+//    if (index === 0) { // adiciona na primeira posição
+//    const current = this.head;
+//   node.next = current; // {2}
+//   this.head = node;
+//    } else {
+//    const previous = this.getElementAt(index - 1); // {3}
+//    const current = previous.next; // {4}
+//    node.next = current; // {5}
+//    previous.next = node; // {6}
+//   }
+//    this.count++; // atualiza o tamanho da lista
+//   return true;
+//    }
+//    return false; // {7}
+//   }
+
+//Método indexOF = Esse método recebe o valor de um elemento e devolve a sua posição caso ele seja
+//encontrado. Do contrário, -1 será devolvido.
+
+//indexOf(element) {
+//    let current = this.head; // {1}
+//    for (let i = 0; i < this.count && current != null; i++) { // {2}
+//    if (this.equalsFn(element, current.element)) { // {3}
+//    return i; // {4}
+//    }
+//   current = current.next; // {5}
+//   }
+//    return -1; // {6}
+//    }
+
+//Removendo um elemento da lista ligada
+
+//remove(element) {
+//    const index = this.indexOf(element);
+//    return this.removeAt(index);
+//    }
+
+//Métodos isEmpty, size e getHead
+//Size = devolve o número de elementos da lista.
+//isEmpty = devolverá true se não houver nenhum elemento na lista, e false caso contrário.
+//getHead = se precisarmos iterar pela lista fora da implementação da classe, podemos
+//disponibilizar um método para obter o primeiro elemento da lista.
+
+//Método toString = O método toString converte o objeto LinkedList em uma string.
+
+//toString() {
+//    if (this.head == null) { // {1}
+//   return '';
+//   }
+//    let objString = `${this.head.element}`; // {2}
+//    let current = this.head.next; // {3}
+//    for (let i = 1; i < this.size() && current != null; i++) { // {4}
+//    objString = `${objString},${current.element}`;
+//    current = current.next;
+//    }
+//    return objString; // {5}
+//    }
